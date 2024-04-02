@@ -1,25 +1,81 @@
- <!DOCTYPE html>
-<html lang="pt-br">
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
-    <head>
-    <meta charset="utf-8">
-    <title>Barbearia Alura</title>
-    </head> <style>
-            p{
-              text-align: center
-               }
-            </style>
+:root {
+    --cor-de-fundo: #001e41;
+    --verde: #ffd257;
+    --branco: #f700ffcc;
+    --botao-ativo: #ffc400;
+    --botao-inativo: rgb(255, 238, 0);
+    --texto-fundo: rgb(238, 255, 0);
+}
 
-    <body>
-       <h1 style="text-align: center">Sobre a Barbearia Alura</h1>
-
-        <p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz  para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.     </p>
-
-        <p style="font-size: 20px">Nossa missão é: <em><strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
-
-      <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
-    </body>
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: 'Chakra Petch', sans-serif;
+}
 
 
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
 
-</html>
+.titulo-principal {
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
+}
+
+.titulo-principal span {
+    color: var(--verde);
+}
+
+
+.botao {
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+    border-top: none;
+}
+
+.botao:first-child {
+    border-radius: 40px 40px 0 0;
+}
+
+.botoes {
+    display: block;
+}
+
+.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
+    }
+}
